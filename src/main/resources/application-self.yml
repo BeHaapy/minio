@@ -1,0 +1,7 @@
+
+
+minio:
+  url: http://172.16.0.47:9000/
+  accessKey: ROOTNAME
+  secretKey: CHANGEME123
+

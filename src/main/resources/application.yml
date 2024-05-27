@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: minio
+  profiles:
+    active: self
+
+
+#minio:
+#  url:
+#  accessKey:
+#  secretKey:
+#
+
+
