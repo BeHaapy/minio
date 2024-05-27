@@ -1,9 +1,6 @@
 package org.qyf.minio;
 
-import io.minio.BucketExistsArgs;
-import io.minio.MakeBucketArgs;
-import io.minio.MinioClient;
-import io.minio.UploadObjectArgs;
+import io.minio.*;
 import io.minio.errors.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -21,6 +18,15 @@ public class MinioDo {
     
     String bucketName = "test";
 
+//    @PostConstruct
+    public void fileDownload() throws ServerException, InsufficientDataException, ErrorResponseException, IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException, InternalException {
+        minioClient.downloadObject(
+                DownloadObjectArgs.builder()
+                        .bucket(bucketName)
+                        .object("test_target02.txt")
+                        .filename("D:\\test_download.txt")
+                        .build());
+    }
 
 
 //    @PostConstruct
