@@ -5,9 +5,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * @Author: qyf
+ * @Date: Create in 2024/5/27
+ */
+
 @Configuration
 public class MinioConfig {
-
 
     @Value("${minio.url}")
     String minioUrl;
@@ -20,9 +24,9 @@ public class MinioConfig {
 
     @Bean
     public MinioClient bucket1MinioClient() {
-        System.out.println(minioUrl);
-        System.out.println(accessKey);
-        System.out.println(secretKey);
+//        System.out.println(minioUrl);
+//        System.out.println(accessKey);
+//        System.out.println(secretKey);
         return MinioClient.builder()
                 .endpoint(minioUrl)
                 .credentials(accessKey, secretKey)

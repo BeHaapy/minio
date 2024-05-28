@@ -11,7 +11,7 @@ import java.security.NoSuchAlgorithmException;
 
 
 @Component
-public class MinioDo {
+public class MinioDoDemo {
 
     @Autowired
     MinioClient minioClient;
